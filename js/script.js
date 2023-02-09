@@ -57,23 +57,31 @@ $(".switch").on("click", function(event){
 
 $("#submit").click(function(){
   console.log("Checking");
-  let score = 0;
+  let scoreCorrect = 0;
+  let scoreWrong = 0;
+  let scoreNoAttempt = 0;
   for (let i = 0; i < 10; i++) {
     //$("#m" + (i + 1)).text(multiplier[i] + " =");
     console.log($("#dropBox" + (i + 1)).attr("data-answer"));
     if ($("#dropBox" + (i + 1)).children('p').length == 1){
       if($("#dropBox" + (i + 1)).children('p')[0].textContent === $("#dropBox" + (i + 1)).attr("data-answer")){
-        score++;
+        scoreCorrect++;
         $("#dropBox" + (i + 1)).css("background-color","green");
       } else{
+        scoreWrong++;
         $("#dropBox" + (i + 1)).css("background-color","red");
       }
     } else{
       console.log("undefined");
+      scoreNoAttempt++;
       $("#dropBox" + (i + 1)).css("background-color","yellow");
     }
   }
-  console.log(score);
+  console.log(scoreCorrect);
+  $("#score-correct").text(scoreCorrect);
+  $("#score-wrong").text(scoreWrong);
+  $("#score-no-attempt").text(scoreNoAttempt);
+  $("#exampleModalCenter").modal();
 })
 
 let mode="testing";
