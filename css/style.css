@@ -127,3 +127,15 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+#learning-mode-text{
+  display: none;
+}
+
+#testing-mode-text{
+  display: inline;
+}
+
+#submit{
+  margin-left: 20px;
+}

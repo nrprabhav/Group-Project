@@ -44,9 +44,36 @@ function fillQuestions() {
 $(".switch").on("click", function(event){
   if($("#learning-mode").is(':checked')){
     mode = "learning";
+    $("#testing-mode-text").css("display","none");
+    $("#learning-mode-text").css("display","inline");
+    $("#submit").css("display","none");
   } else{
     mode = "testing";
+    $("#testing-mode-text").css("display","inline");
+    $("#learning-mode-text").css("display","none");
+    $("#submit").css("display","inline");
   }
+})
+
+$("#submit").click(function(){
+  console.log("Checking");
+  let score = 0;
+  for (let i = 0; i < 10; i++) {
+    //$("#m" + (i + 1)).text(multiplier[i] + " =");
+    console.log($("#dropBox" + (i + 1)).attr("data-answer"));
+    if ($("#dropBox" + (i + 1)).children('p').length == 1){
+      if($("#dropBox" + (i + 1)).children('p')[0].textContent === $("#dropBox" + (i + 1)).attr("data-answer")){
+        score++;
+        $("#dropBox" + (i + 1)).css("background-color","green");
+      } else{
+        $("#dropBox" + (i + 1)).css("background-color","red");
+      }
+    } else{
+      console.log("undefined");
+      $("#dropBox" + (i + 1)).css("background-color","yellow");
+    }
+  }
+  console.log(score);
 })
 
 let mode="testing";
