@@ -8,6 +8,8 @@ function drag(event) {
 }
 
 function drop(event) {
+  // When one of the answers if dropped
+  
   event.preventDefault();
   var data = event.dataTransfer.getData("text");
   event.target.appendChild(document.getElementById(data));
@@ -23,25 +25,33 @@ function drop(event) {
 }
 
 function fillQuestions() {
+  // Fill questions on the page
+
+  // Randomize the order of multipliers
   let multiplier = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   let answers = new Array(10).fill(0);
   console.log(multiplier.sort(() => Math.random() - 0.5));//Do not comment out
+  
+  // Display the questions and change the answers for the dropboxes
   for (let i = 0; i < 10; i++) {
+    $(".table-of-").text(timesTableOf);
     $("#m" + (i + 1)).text(multiplier[i] + " =");
-    $("#dropBox" + (i + 1)).attr("data-answer", multiplier[i] * 7);
+    $("#dropBox" + (i + 1)).attr("data-answer", multiplier[i] * timesTableOf);
   }
+
+  // Display the answers in a sorted manner
   for (let i = 0; i < 10; i++) {
     answers[i] = multiplier[i];
   }
-  //console.log(multiplier);
   console.log(answers.sort((a, b) => a - b));//Do not comment out
   for (let i = 0; i < 10; i++) {
-    //answersSubset.slice(0,-1).sort();
-    $("#a" + (i + 1)).text(answers[i] * 7);
+    $("#a" + (i + 1)).text(answers[i] * timesTableOf);
   }
 }
 
 function changeDisplayMode() {
+  // Switch between Learning and Testing Mode
+
   if ($("#learning-mode").is(':checked')) {
     mode = "learning";
     localStorage.setItem("mode", mode);
@@ -58,11 +68,15 @@ function changeDisplayMode() {
 }
 
 $(".switch").on("click", function (event) {
+  // When the mode is toggled
+
   changeDisplayMode();
   location.reload();
 })
 
 $("#submit").click(function () {
+  // When the "Check Your Answers" button is clicked
+
   console.log("Checking");
   let scoreCorrect = 0;
   let scoreWrong = 0;
@@ -91,6 +105,7 @@ $("#submit").click(function () {
   $("#exampleModalCenter").modal();
 })
 
+let timesTableOf = 12;
 let mode = localStorage.getItem("mode");
 if (mode === null) {
   mode = "testing";

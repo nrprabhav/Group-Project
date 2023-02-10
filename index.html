@@ -13,11 +13,11 @@
 <body>
     <h1>Drag and Drop to Test</h1>
     <div id="questions">
-        <p width="200">7 x <span id="m1">5</span></p>
-        <p id="q2" width="200">7 x <span id="m2">6</span></p>
-        <p id="q3" width="200">7 x <span id="m3">6</span></p>
-        <p id="q4" width="200">7 x <span id="m4">6</span></p>
-        <p id="q5" width="200">7 x <span id="m5">6</span></p>
+        <p id="q1" width="200"><span class="table-of-">7</span> x <span id="m1">5</span></p>
+        <p id="q2" width="200"><span class="table-of-">7</span> x <span id="m2">6</span></p>
+        <p id="q3" width="200"><span class="table-of-">7</span> x <span id="m3">6</span></p>
+        <p id="q4" width="200"><span class="table-of-">7</span> x <span id="m4">6</span></p>
+        <p id="q5" width="200"><span class="table-of-">7</span> x <span id="m5">6</span></p>
     </div>
     <div id="dropZone">
         <div id="dropBox1" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="35">
@@ -60,14 +60,16 @@
         </div>
     </div>
     <div id="questions">
-        <p id="q6" width="200">7 x <span id="m6">6</span></p>
-        <p id="q7" width="200">7 x <span id="m7">6</span></p>
-        <p id="q8" width="200">7 x <span id="m8">6</span></p>
-        <p id="q9" width="200">7 x <span id="m9">6</span></p>
-        <p id="q10" width="200">7 x <span id="m10">6</span></p>
+        <p id="q6" width="200"><span class="table-of-">7</span> x <span id="m6">6</span></p>
+        <p id="q7" width="200"><span class="table-of-">7</span> x <span id="m7">6</span></p>
+        <p id="q8" width="200"><span class="table-of-">7</span> x <span id="m8">6</span></p>
+        <p id="q9" width="200"><span class="table-of-">7</span> x <span id="m9">6</span></p>
+        <p id="q10" width="200"><span class="table-of-">7</span> x <span id="m10">6</span></p>
     </div>
 
     <div id="mode-select">
+        <button class="btn btn-primary mr-5" id="go-back" href="./home.html">Go back</button>
+
         <span id="learning-mode-text">Learning Mode:</span>
         <span id="testing-mode-text">Testing Mode:</span>
         <label class="switch">
@@ -77,12 +79,6 @@
 
         <button class="btn btn-primary" id="submit" type="submit">Check Your Answers</button>
     </div>
-
-    <!-- Modal -->
-    <!-- Button trigger modal 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Launch demo modal
-    </button>-->
 
     <!-- Modal -->
     <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog"
