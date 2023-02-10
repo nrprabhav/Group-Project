@@ -9,7 +9,7 @@ h1{
   flex-flow: row nowrap;
   justify-content: center;
   min-height: 100px;
-  margin-bottom: 20px;
+  margin: 0px;
 }
 
 #questions {
@@ -33,7 +33,7 @@ h1{
   height: 50px;
   width: 150px;
   margin: 0px;
-  font-size: xx-large;
+  font-size: x-large;
   text-align: center;
   vertical-align: middle;
   border: 2px solid white;
@@ -50,7 +50,7 @@ h1{
   height: 50px;
   width: 150px;
   margin: 0px;
-  font-size: xx-large;
+  font-size: x-large;
   text-align: center;
   vertical-align: middle;
   border: 2px solid white;
@@ -138,4 +138,22 @@ input:checked + .slider:before {
 
 #submit{
   margin-left: 20px;
+}
+
+@media screen and (max-width: 476px){
+  #questions p{
+    font-size: large;
+    height: 30px;
+  }
+  .answers-drag{
+    font-size: large;
+    height: 30px;
+  }
+  #dropZone,
+  #answers {
+  min-height: 60px;
+  }
+  #mode-select{
+    margin-top: 0px;
+  }
 }
