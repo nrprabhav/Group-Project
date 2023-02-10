@@ -107,8 +107,10 @@ $("#submit").click(function () {
   $("#exampleModalCenter").modal();
 })
 
-// Which times table are we practicing - options in another page
+/*********************************/
+// Which times table are we practicing - options from the homepage
 let timesTableOf = 12;
+/*********************************/
 
 // Get mode from local storage.
 let mode = localStorage.getItem("mode");
