@@ -3,6 +3,8 @@ function allowDrop(event) {
 }
 
 function drag(event) {
+  // When a box is dragged
+
   console.log(event.target.textContent);
   event.dataTransfer.setData("text", event.target.id);
 }
@@ -71,7 +73,7 @@ $(".switch").on("click", function (event) {
   // When the mode is toggled
 
   changeDisplayMode();
-  location.reload();
+  location.reload(); // refresh so that the answers start from beginning
 })
 
 $("#submit").click(function () {
@@ -105,17 +107,19 @@ $("#submit").click(function () {
   $("#exampleModalCenter").modal();
 })
 
+// Which times table are we practicing - options in another page
 let timesTableOf = 12;
+
+// Get mode from local storage.
 let mode = localStorage.getItem("mode");
-if (mode === null) {
+if (mode === null) { //If mode doesn't exist
   mode = "testing";
   //localStorage.setItem("mode", mode);
   $("#learning-mode").prop("checked", false);
-} else if (mode === "testing") {
+} else if (mode === "testing") { //If it is testing
   $("#learning-mode").prop("checked", false);
-} else {
+} else {  // If it is learning
   mode = "learning";
-  //localStorage.setItem("mode", mode);
   $("#learning-mode").prop("checked", true);
 }
 changeDisplayMode();
