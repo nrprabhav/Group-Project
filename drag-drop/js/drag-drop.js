@@ -37,7 +37,7 @@ function fillQuestions() {
   // Display the questions and change the answers for the dropboxes
   for (let i = 0; i < 10; i++) {
     $(".table-of-").text(timesTableOf);
-    $("#m" + (i + 1)).text(multiplier[i] + " =");
+    $("#m" + (i + 1)).text(multiplier[i]);
     $("#dropBox" + (i + 1)).attr("data-answer", multiplier[i] * timesTableOf);
   }
 
