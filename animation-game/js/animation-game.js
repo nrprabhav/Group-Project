@@ -1,29 +1,36 @@
 
 var id = null;
+var posMonster = -150;
 function myMove() {
   var elem = document.getElementById("myAnimation");   
-  var pos = 00;
   clearInterval(id);
   id = setInterval(frame, 10);
   function frame() {
-    if (pos == window.innerWidth-100) {
+    if (posMonster == window.innerWidth-100) {
+      elem.src=elem.dataset.still;
       clearInterval(id);
     } else {
-      pos++; 
-      //elem.style.top = pos + 'px'; 
-      elem.style.left = pos + 'px'; 
+      posMonster++; 
+      elem.style.left = posMonster + 'px'; 
+      if(posMonster>=posBot){
+        clearInterval(id);
+        console.log("You Lost!");
+        elem.src="https://media1.giphy.com/media/1mgObw4w1GZR0vmnRe/200_s.gif";
+      }
     }
   }
 }
 
-var pos = 00;
+var posBot = 00;
 function moveBot() {
   var elem = document.getElementById("myBot");   
-  if (pos >= window.innerWidth-100) {
+  if (posBot >= window.innerWidth-100) {
     
   } else {
-    pos+=50; 
+    posBot+=50; 
     //elem.style.top = pos + 'px'; 
-    elem.style.left = pos + 'px'; 
+    elem.style.left = posBot + 'px'; 
+    console.log(elem.src);
+    elem.src=elem.dataset.animate;
   }
 }
