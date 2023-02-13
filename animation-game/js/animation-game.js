@@ -15,3 +15,15 @@ function myMove() {
     }
   }
 }
+
+var pos = 00;
+function moveBot() {
+  var elem = document.getElementById("myBot");   
+  if (pos >= window.innerWidth-100) {
+    
+  } else {
+    pos+=50; 
+    //elem.style.top = pos + 'px'; 
+    elem.style.left = pos + 'px'; 
+  }
+}
