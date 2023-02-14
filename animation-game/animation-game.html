@@ -10,23 +10,21 @@
 <button onclick="myMove()">Click Me</button> 
 </p>
 
-<p>
-    <button onclick="moveBot()">Move Bot Forward</button> 
-</p>
+<form>
+    <label for="fname">7 x 2 = </label>
+    <input type="text" id="fname" name="fname">
+    <button id="submit" type="Submit">Submit</button>
+</form>
+
 
 <div id ="myContainer">
 <img id="myAnimation" src="https://media1.giphy.com/media/1mgObw4w1GZR0vmnRe/200.gif" 
-data-still="https://media1.giphy.com/media/1mgObw4w1GZR0vmnRe/200.gif"
-data-animate="https://media1.giphy.com/media/1mgObw4w1GZR0vmnRe/200.gif"
-data-state="still"
 frameBorder="0" class="gif" ></img>
 <img id="myBot" src="https://media1.giphy.com/media/l3q2wuKKE8qQ9YvMQ/200_s.gif"
-data-still="https://media1.giphy.com/media/l3q2wuKKE8qQ9YvMQ/200_s.gif" 
-data-animate="https://media1.giphy.com/media/l3q2wuKKE8qQ9YvMQ/200.gif"
-data-state="still"
 frameBorder="0" class="gif" ></img>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./js/animation-game.js"></script>
 
 </body>

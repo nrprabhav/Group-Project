@@ -1,7 +1,7 @@
 
 #myContainer {
-  
-  height: 400px;
+  margin-top: 50px;
+  height: 100px;
   position: relative;
   background: yellow;
 }
