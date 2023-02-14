@@ -1,22 +1,32 @@
 
 #myContainer {
   margin-top: 50px;
-  height: 100px;
+  height: 10vh;
   position: relative;
   background: yellow;
 }
 
 #myAnimation {
-  width: 100px;
-  height: 100px;
+  width: 10vh;
+  height: 10vh;
   position: absolute;
-  left: -150px;
+  left: -15vh;
   background-color: red;
   z-index: 999;
 }
 
 #myBot {
-  width: 100px;
-  height: 100px;
+  width: 10vh;
+  height: 10vh;
   position: absolute;
+}
+
+input[type="text"]
+{
+    font-size: 4vh;
+}
+
+#game-settings{
+  position: absolute;
+  bottom: 10px;
 }
