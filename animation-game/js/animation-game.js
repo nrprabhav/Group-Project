@@ -69,7 +69,7 @@ $("#submit").on("click", function moveBot(event) {
     displayNewQuestion();
     input.value="";
   }
-  else {
+  else if (parseInt(input.value) == correctAnswer){
     myBot.style.left = 90 + '%';
     clearInterval(id);
     myBot.src="https://media1.giphy.com/media/l3q2wuKKE8qQ9YvMQ/200_s.gif";
