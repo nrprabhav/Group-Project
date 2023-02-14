@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/drag-drop.css" />
+    <title>Drag and Drop Times Table</title>
+</head>
+
+<body>
+    <h1>Drag and Drop to Test</h1>
+    <div id="time-table-selector" >
+        <div class="form-group w-25 mx-auto py-4 mb-0">
+            <label for="selectTable">
+                <h4>Select the Table that you want to test/practice</h4>
+            </label>
+            <select class="form-control" id="selectTable">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+        </div>
+    </div>
+    <div class="p-2 mt-0" id="drag-drop-container">
+        <div id="questions">
+            <p id="q1" width="200"><span class="table-of-">7</span> x <span id="m1">5</span></p>
+            <p id="q2" width="200"><span class="table-of-">7</span> x <span id="m2">6</span></p>
+            <p id="q3" width="200"><span class="table-of-">7</span> x <span id="m3">6</span></p>
+            <p id="q4" width="200"><span class="table-of-">7</span> x <span id="m4">6</span></p>
+            <p id="q5" width="200"><span class="table-of-">7</span> x <span id="m5">6</span></p>
+        </div>
+        <div id="dropZone">
+            <div id="dropBox1" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="35">
+            </div>
+            <div id="dropBox2" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="42">
+            </div>
+            <div id="dropBox3" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="49">
+            </div>
+            <div id="dropBox4" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="56">
+            </div>
+            <div id="dropBox5" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="63">
+            </div>
+        </div>
+        <p id="text">Choose the answers below and drop into the boxes.</p><br>
+        <div id="answers" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p class="answers-drag" id="a1" draggable="true" ondragstart="drag(event)" width="200">0</p>
+            <p class="answers-drag" id="a2" draggable="true" ondragstart="drag(event)" width="200">7</p>
+            <p class="answers-drag" id="a3" draggable="true" ondragstart="drag(event)" width="200">63</p>
+            <p class="answers-drag" id="a4" draggable="true" ondragstart="drag(event)" width="200">56</p>
+            <p class="answers-drag" id="a5" draggable="true" ondragstart="drag(event)" width="200">49</p>
+        </div>
+        <div id="answers" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p class="answers-drag" id="a6" draggable="true" ondragstart="drag(event)" width="200">35</p>
+            <p class="answers-drag" id="a7" draggable="true" ondragstart="drag(event)" width="200">42</p>
+            <p class="answers-drag" id="a8" draggable="true" ondragstart="drag(event)" width="200">63</p>
+            <p class="answers-drag" id="a9" draggable="true" ondragstart="drag(event)" width="200">56</p>
+            <p class="answers-drag" id="a10" draggable="true" ondragstart="drag(event)" width="200">49</p>
+        </div>
+
+        <div id="dropZone">
+            <div id="dropBox6" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="35">
+            </div>
+            <div id="dropBox7" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="42">
+            </div>
+            <div id="dropBox8" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="49">
+            </div>
+            <div id="dropBox9" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="56">
+            </div>
+            <div id="dropBox10" ondrop="drop(event)" ondragover="allowDrop(event)" data-answer="63">
+            </div>
+        </div>
+        <div id="questions">
+            <p id="q6" width="200"><span class="table-of-">7</span> x <span id="m6">6</span></p>
+            <p id="q7" width="200"><span class="table-of-">7</span> x <span id="m7">6</span></p>
+            <p id="q8" width="200"><span class="table-of-">7</span> x <span id="m8">6</span></p>
+            <p id="q9" width="200"><span class="table-of-">7</span> x <span id="m9">6</span></p>
+            <p id="q10" width="200"><span class="table-of-">7</span> x <span id="m10">6</span></p>
+        </div>
+    </div>
+    <div id="mode-select" class="p-2 mt-0">
+        <!--PUT LINK TO HOMEPAGE HERE-->
+        <button class="btn btn-primary mr-sm-5" id="go-back" href="../index.html">Go back</button>
+
+        <span id="learning-mode-text">Learning Mode:</span>
+        <span id="testing-mode-text">Testing Mode:</span>
+        <label class="switch">
+            <input type="checkbox" id="learning-mode">
+            <span class="slider round"></span>
+        </label>
+
+        <button class="btn btn-primary" id="submit" type="submit">Check</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Your Scores</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>You got <span id="score-correct">1</span> problems correct</p>
+                    <p>You got <span id="score-wrong">1</span> problems wrong</p>
+                    <p>You didn't attempt or submitted invalid answers for <span id="score-no-attempt">1</span> problems
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="./js/drag-drop.js"></script>
+</body>
+
+
+
+</html>

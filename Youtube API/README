@@ -1,0 +1,23 @@
+# Project 1: Times Table Practice
+
+
+## User Story
+
+AS A parent
+I WANT an app to practice time tables with my child
+SO THAT she can get better at it
+
+## Features
+
+Learning Mode
+* Select the table to be learned
+* The times problems are displayed till the student gets it right three times
+* A sticker (GIPHY API) is awarded when the student finishes revising a table
+* Keep track of problems that student gets wrong and ask them again
+* Play a video of a song for the particular times table (Youtube API) if the child wants to learn the song
+* If the user gets the table wrong more than [] times, they have to watch the video
+
+Testing Mode
+* Take an input of the range of sums to be tested
+* User can select a timed test or a test consisting of a fixed number of problems
+* Some award based on the score is given to the student
