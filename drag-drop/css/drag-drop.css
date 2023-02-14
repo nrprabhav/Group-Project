@@ -12,6 +12,18 @@ h1{
   margin: 0px;
 }
 
+#drag-drop-container{
+  background-color: beige;
+}
+
+#time-table-selector{
+  background-color: bisque;
+}
+
+#mode-select{
+  background-color: rgb(226, 238, 238);
+}
+
 #questions {
   display: flex;
   flex-flow: row nowrap;
