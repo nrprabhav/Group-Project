@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/animation-game.css" />
+</head>
+
+<body>
+    <form>
+        <div class="container w-50 mt-5">
+            <div class="row">
+                <div class="col">
+                    <label for="fname" class="display-4 ml-5"> <span id="num1">7</span> x <span id="num2">2</span> =
+                    </label>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="" id="fname" name="fname" size="3">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="Submit" id="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+
+    <div id="myContainer">
+        <img id="myAnimation" src="https://media1.giphy.com/media/1mgObw4w1GZR0vmnRe/200.gif" frameBorder="0"
+            class="gif"></img>
+        <img id="myBot" src="https://media1.giphy.com/media/l3q2wuKKE8qQ9YvMQ/200_s.gif" frameBorder="0"
+            class="gif"></img>
+    </div>
+    <h1 class="display-4 text-center mt-5">Save the banana before the monster eats it!</h1>
+    <div class="container-fluid" id="game-settings">
+        <div class="row">
+            <div class="col">
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <label>Select the biggest sum you want to test</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <select class="custom-select mr-sm-2 w-25 form-control form-control-lg" id="tableLimit1">
+                                    <option selected>12</option>
+                                    <option value="11">11</option>
+                                    <option value="10">10</option>
+                                    <option value="9">9</option>
+                                    <option value="8">8</option>
+                                    <option value="7">7</option>
+                                    <option value="6">6</option>
+                                    <option value="5">5</option>
+                                    <option value="4">4</option>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                </select>
+                                <span>x</span>
+                                <select class="custom-select mr-sm-2 w-25 form-control form-control-lg" id="tableLimit2">
+                                    <option selected>12</option>
+                                    <option value="11">11</option>
+                                    <option value="10">10</option>
+                                    <option value="9">9</option>
+                                    <option value="8">8</option>
+                                    <option value="7">7</option>
+                                    <option value="6">6</option>
+                                    <option value="5">5</option>
+                                    <option value="4">4</option>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <label>Select the speed of the monster</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <select class="custom-select mr-sm-2 w-50 form-control form-control-lg" id="monster-speed">
+                                    <option selected value="1">Level 1 (Slowest)</option>
+                                    <option value="2">Level 2</option>
+                                    <option value="3">Level 3</option>
+                                    <option value="4">Level 4</option>
+                                    <option value="5">Level 5</option>
+                                    <option value="6">Level 6</option>
+                                    <option value="7">Level 7</option>
+                                    <option value="8">Level 8</option>
+                                    <option value="9">Level 9</option>
+                                    <option value="10">Level 10 (Fastest)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./js/animation-game.js"></script>
+
+</body>
+
+</html>
