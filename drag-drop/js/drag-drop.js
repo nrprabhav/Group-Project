@@ -110,6 +110,10 @@ $("#submit").click(function () {
 /*********************************/
 // Which times table are we practicing - options from the homepage
 let timesTableOf = 12;
+$("#selectTable").change(function(){
+  timesTableOf = $(this).children("option:selected").val();
+  fillQuestions();
+});
 /*********************************/
 
 // Get mode from local storage.
