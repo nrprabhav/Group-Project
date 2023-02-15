@@ -25,7 +25,7 @@ function myMove() {
         myMonster.style.left = posMonster + "%";
         console.log("You Lost!");
         gameLost();
-        myMonster.src="https://media1.giphy.com/media/1mgObw4w1GZR0vmnRe/200_s.gif";
+        myMonster.src="https://media1.giphy.com/media/kEEKvwfCkswGIZHPA2/200_s.gif";
       }
     }
   }
@@ -65,15 +65,15 @@ $("#submit").on("click", function moveBot(event) {
     //elem.style.top = pos + 'px'; 
     myBot.style.left = posBot + '%'; 
     console.log(myBot.src);
-    myBot.src="https://media1.giphy.com/media/l3q2wuKKE8qQ9YvMQ/200.gif";
+    myBot.src="https://media1.giphy.com/media/xTcnSMB8VXjTox23zW/200.gif";
     displayNewQuestion();
     input.value="";
   }
   else if (parseInt(input.value) == correctAnswer){
     myBot.style.left = 90 + '%';
     clearInterval(id);
-    myBot.src="https://media1.giphy.com/media/l3q2wuKKE8qQ9YvMQ/200_s.gif";
-    myMonster.src="https://media1.giphy.com/media/1mgObw4w1GZR0vmnRe/200_s.gif";
+    myBot.src="https://media1.giphy.com/media/xTcnSMB8VXjTox23zW/200_s.gif";
+    myMonster.src="https://media1.giphy.com/media/kEEKvwfCkswGIZHPA2/200_s.gif";
     console.log("You have won!");
     gameWin();
   }

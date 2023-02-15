@@ -1,6 +1,10 @@
 h1{
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
+  text-justify:inherit;
+  background-image: URL("/assets/banner-static.png");
+  max-width: 100%;
+  min-height: 150px;
 }
 
 #dropZone,
@@ -13,15 +17,15 @@ h1{
 }
 
 #drag-drop-container{
-  background-color: beige;
+  background-color: rgb(209, 251, 220);
 }
 
 #time-table-selector{
-  background-color: bisque;
+  background-color: #97D9FF;
 }
 
 #mode-select{
-  background-color: rgb(226, 238, 238);
+  background-color: #97D9FF;
 }
 
 #questions {
