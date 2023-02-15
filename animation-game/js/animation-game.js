@@ -4,9 +4,9 @@ var myMonster = document.getElementById("myAnimation");
 let start = 0;
 let width = screen.width;
 let speed = parseFloat($("#monster-speed").children("option:selected").val());
-
 var id = null;
 var posMonster = -speed-4;
+
 function myMove() {
   clearInterval(id);
   id = setInterval(frame, 300);
@@ -24,6 +24,7 @@ function myMove() {
         posMonster=posBot;
         myMonster.style.left = posMonster + "%";
         console.log("You Lost!");
+        gameLost();
         myMonster.src="https://media1.giphy.com/media/1mgObw4w1GZR0vmnRe/200_s.gif";
       }
     }
@@ -40,6 +41,21 @@ function displayNewQuestion() {
   $("#num2").text(parseInt(num2));
 }
 
+function gameLost(){
+  console.log("Display Lost Modal");
+  $('#myLoseModal').modal('show');
+  //$("#monsterEating").play();
+}
+
+function gameWin(){
+  console.log("Display Win Modal");
+  $('#myWinModal').modal('show');
+}
+
+function reload(){
+  location.reload();
+}
+
 var posBot = 00;
 var correctAnswer = 0;
 $("#submit").on("click", function moveBot(event) {
@@ -53,12 +69,13 @@ $("#submit").on("click", function moveBot(event) {
     displayNewQuestion();
     input.value="";
   }
-  else {
+  else if (parseInt(input.value) == correctAnswer){
     myBot.style.left = 90 + '%';
     clearInterval(id);
     myBot.src="https://media1.giphy.com/media/l3q2wuKKE8qQ9YvMQ/200_s.gif";
     myMonster.src="https://media1.giphy.com/media/1mgObw4w1GZR0vmnRe/200_s.gif";
     console.log("You have won!");
+    gameWin();
   }
   if(start == 0) {
     start = 1;
