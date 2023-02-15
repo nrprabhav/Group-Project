@@ -2,7 +2,9 @@
 const timeDisplayEl = $(".time-display");
 // TODO: When open the page, it costs almost 1 second, need to solve this issue, 
 // or load the time after all other things loaded.
-const targetTime = new Date().getTime() + 10000 + 1000;
+// One question lasts for 10s, but here we show total time
+// const totalQuestionNumber = parseInt($(".total-question-number").text());
+const targetTime = new Date().getTime() + 10000 * 1 + 1000;
 function getTime() {
     // console.log(`targetTime = ${targetTime}`);
     // time in milliseconds

@@ -21,16 +21,16 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="jumbotron m-auto col-lg-4 col-md-12 col-sm-12">
+            <div class="jumbotron m-auto col-lg-4 col-md-12 col-sm-12 jumbotron-left">
                 <!-- former question -->
             </div>
-            <div class="jumbotron m-auto col-lg-4 col-md-12 col-sm-12">
+            <div class="jumbotron m-auto col-lg-4 col-md-12 col-sm-12 jumbotron-mid">
                 <div class="countdown-timer float-right">
                     <!-- Place timer here -->
                     <span class="time-display badge badge-info"></span>
                 </div>
                 <br>
-                <h3 class="display-6">Question n:</h3>
+                <h3 class="display-6 question-no">Question n/<span>m</main></span>:</h3>
                 <p class="lead">Fill the blank with your answer.</p>
                 <h1 class="display-4">
                     <span id="multiplicator1">4</span> <span>&#215;</span> <span id="multiplicator2">5</span> = ?
@@ -40,13 +40,31 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-lg">Your answer:</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
+                    <input type="text" class="form-control blank-answer" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-lg">
                 </div>
                 <br>
                 <a class="btn btn-primary btn-lg" href="#" role="button" id="next-button">Next</a>
+                <a class="btn btn-primary btn-lg" href="#" role="button" id="show-results-button">Show results</a>
+                <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
+                    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true"
+                        data-delay="2000">
+                        <div class="toast-header">
+                            <!-- <img src="..." class="rounded mr-2" alt="..."> -->
+                            <span class="badge badge-answer-status badge-primary">&nbsp;&nbsp;&nbsp;</span>
+                            <strong class="mr-auto">&nbsp; Ta-da! &nbsp;</strong>
+                            <small>0 second ago</small>
+                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="toast-body toast-body-answer-status">
+                            Result submitted.
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="jumbotron m-auto col-lg-4 col-md-12 col-sm-12">
+            <div class="jumbotron m-auto col-lg-4 col-md-12 col-sm-12 jumbotron-right">
                 <!-- latter question -->
             </div>
         </div>
@@ -62,10 +80,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-    <!-- Blank filling logic JavaScript -->
-    <script src="./BlankFillingAssets/js/BlankFillingLogic.js"></script>
     <!-- Countdown timer JavaScript -->
     <script src="./BlankFillingAssets/js/CountdownTimerLogic.js"></script>
+    <!-- Blank filling logic JavaScript -->
+    <script src="./BlankFillingAssets/js/BlankFillingLogic.js"></script>
 
 </body>
 
