@@ -76,6 +76,8 @@ $("#submit").on("click", function moveBot(event) {
     myMonster.src="https://media1.giphy.com/media/kEEKvwfCkswGIZHPA2/200_s.gif";
     console.log("You have won!");
     gameWin();
+  } else {
+    input.value="";
   }
   if(start == 0) {
     start = 1;
