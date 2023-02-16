@@ -1,12 +1,22 @@
+const currentUrl = window.location.href;
+const qMark = currentUrl.indexOf("?");
+const aMark = currentUrl.indexOf("&");
+const totalQuestionNumberString = currentUrl.substring(qMark + 1, aMark);
+const tQNSEMark = totalQuestionNumberString.indexOf("=");
+const totalQuestionNumber = totalQuestionNumberString.substring(tQNSEMark + 1);
+const multiplicatorRangeString = currentUrl.substring(aMark + 1);
+const mREMark = multiplicatorRangeString.indexOf("=");
+const multiplicatorRange = multiplicatorRangeString.substring(mREMark + 1);
+
 // questions related variables
 $("#show-results-button").hide();
 // range could be changed at the start page
-let multiplicatorRange = 12;
+// let multiplicatorRange = 12;
 let currentQuestionNumber = 0;
 // total question number is suggested to be smaller than 25 due to GIPHY API, 
 // see reward badge function
 // the total question number can be changed at the start page.
-const totalQuestionNumber = 5;
+// const totalQuestionNumber = 5;
 // count how many questions are correctly answered
 let correctAnswersNumber = 0;
 let answerHistory = [{
