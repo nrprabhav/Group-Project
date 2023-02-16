@@ -162,13 +162,14 @@ This website was developed by a team of developers as below
 ## Future Work
 
 - [ ] Learning Path
-      A learning path for children starting from simple counting all the way up.
+      A learning path for children starting from simple counting all the way up
 - [ ] Tracking
-      Implementing a way to track user's progress and remember it over sessions.
+      Implementing a way to track user's progress and remember it over sessions
 - [ ] Sound
-      Add sounds to the games to improve engagement.
+      Add sounds to the games to improve engagement
+- [ ] Do extensive testing to locate bugs in the code
 - [ ] New games and other Features
-- [ ] Finish the times table quiz game. Unfinished version [here](https://nrprabhav.github.io/Times-Table-Trainer/HighScore-web-page/index.html).
+- [ ] Finish the times table quiz game. Unfinished version [here](https://nrprabhav.github.io/Times-Table-Trainer/HighScore-web-page/index.html)
 
 See the [open issues](https://github.com/nrprabhav/Group-Project/issues) for a full list of proposed features (and known issues).
 
