@@ -57,16 +57,9 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#features-of-the-page">Features of the Page</a></li>
+    <li><a href="#future-work">Future Work</a></li>
+    <li><a href="#contributions">Contributions</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -97,32 +90,21 @@ This is a website with different tools for kids to learn their times table. A va
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-### Installation (not sure if anyone has anything for this place)
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/nrprabhav/Group-Project.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- Features of the Page -->
 ### Features of the Page
 1. The home page offers the user an option of choosing to play several games or learn the times table using Youtube videos
 2. Several games are offered:
     a. Save the bird Animation game with speed control
     b. Drag and Drop game with learning mode and testing mode
+    - A countdown timer in the testing mode
+
     c. Fill in the blanks
+    - Reward badges are given on completion of game - badges have four friendly mascots: cat, dog, rabbit and hamster.
+    - Three levels of difficulty
+    - A countdown timer
+    - Sound prompt along with the timer
+
+    d. Times table quiz game
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -158,7 +140,7 @@ This is a website with different tools for kids to learn their times table. A va
 This website was developed by a team of developers as below
 
 - [Bilaal Kulane](https://github.com/bilaalgithub)
-  Bilaal worked on the countdown timer foro drag-drop game
+  Bilaal worked on the countdown timer for the drag-drop game
 - [Maisie Truong](https://github.com/mtruong1995)
   Maisie created the homepage, linked the pages together and worked on styling to follow a theme.
 - [Prabhav Reddy](https://github.com/nrprabhav)
@@ -167,7 +149,7 @@ This website was developed by a team of developers as below
   - save the bird game, and 
   - video song page
 - [Ranjana Kumar](https://github.com/kumarranjana)
-  Helped to review code
+  Helped to review code and designed the Times table quiz game
 - [Weilong Wang](https://github.com/V7lanw)
   Weilong took a lead in making the:
   - blank filling game, and
@@ -177,7 +159,7 @@ This website was developed by a team of developers as below
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
-## Roadmap
+## Future Work
 
 - [ ] Learning Path
       A learning path for children starting from simple counting all the way up.
@@ -186,6 +168,7 @@ This website was developed by a team of developers as below
 - [ ] Sound
       Add sounds to the games to improve engagement.
 - [ ] New games and other Features
+- [ ] Finish the times table quiz game. Unfinished version [here](https://nrprabhav.github.io/Times-Table-Trainer/HighScore-web-page/index.html).
 
 See the [open issues](https://github.com/nrprabhav/Group-Project/issues) for a full list of proposed features (and known issues).
 
@@ -213,8 +196,9 @@ Deployed Link: [https://nrprabhav.github.io/Times-Table-Trainer/](https://nrprab
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments (Are there any?)
+## Acknowledgments
 
+* Thanks to Drew Hoang and Austin Imbastari for teaching and supporting us.
 * [Fantastic-pudding](https://fantastic-pudding.vercel.app/)
 * [Bootstrap](https://getbootstrap.com/)
 
