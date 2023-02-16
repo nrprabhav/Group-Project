@@ -92,6 +92,7 @@ This is a website with different tools for kids to learn their times table. A va
 * [![JQuery][JQuery.com]][JQuery-url]
 * [![Svelte][youtube.dev]][youtube-url]
 * [![GiPhy][giphy.com]][giphy-url]
+* [![Canva][canva.com]][canva-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,6 +126,14 @@ This is a website with different tools for kids to learn their times table. A va
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+
+Homepage
+
+[[homepage-screenshot](./images/homepage-screenshot.png)
+[![drag-and-drop-game-screenshot](./images/drag-and-drop-screenshot.png)
+[![save-bird-game-screenshot](./images/save-bird-game-screenshot.png)
+[![revision-youtube-screenshot](./images/youtube-revision-screenshot.png)
+
 
 Add screen-shots of each page working.
 
@@ -227,3 +236,5 @@ Deployed Link: [https://nrprabhav.github.io/Group-Project/](https://nrprabhav.gi
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[canva.com]:https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white
+[canva-url]: https://www.canva.com/

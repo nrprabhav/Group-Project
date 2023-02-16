@@ -3,7 +3,7 @@
   margin-top: 50px;
   height: 10vh;
   position: relative;
-  background: yellow;
+  background: #97D9FF;
 }
 
 #myAnimation {
@@ -29,4 +29,8 @@ input[type="text"]
 #game-settings{
   position: absolute;
   bottom: 10px;
+}
+
+body {
+  background-color: rgb(209, 251, 220);
 }
