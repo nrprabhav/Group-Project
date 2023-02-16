@@ -7,3 +7,11 @@
     justify-content: center;
     padding: 25px;
 } */
+
+body {
+    background-color: #97D9FF;
+}
+
+.jumbotron {
+    background-color: rgb(209, 251, 220);
+}
