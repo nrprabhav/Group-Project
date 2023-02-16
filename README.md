@@ -121,6 +121,11 @@ This is a website with different tools for kids to learn their times table. A va
 
 ![save-bird-game-screenshot](./images/save-bird-game-screenshot.png)
 
+#### Fill in The Blank Game
+
+![fill-in-blank-screenshot](./images/fill-in-blank-screenshot.png)
+
+
 #### Revision Videos Page
 
 ![revision-youtube-screenshot](./images/youtube-revision-screenshot.png)
@@ -134,15 +139,21 @@ This is a website with different tools for kids to learn their times table. A va
 
 This website was developed by a team of developers as below
 
-- [Bilaal Kulane]()
-- [Maisie Truong]()
+- [Bilaal Kulane](https://github.com/bilaalgithub)
+  Bilaal worked on the countdown timer foro drag-drop game
+- [Maisie Truong](https://github.com/mtruong1995)
+  Maisie created the homepage, linked the pages together and worked on styling to follow a theme.
 - [Prabhav Reddy](https://github.com/nrprabhav)
   Prabhav took a lead in making the 
   - drag-drop game, 
   - save the bird game, and 
   - video song page
-- [Ranjana Kumar]()
-- [Weilong Wang]()
+- [Ranjana Kumar](https://github.com/kumarranjana)
+  Helped to review code
+- [Weilong Wang](https://github.com/V7lanw)
+  Weilong took a lead in making the:
+  - blank filling game, and
+  - adding the GIPHY api
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -156,7 +167,7 @@ This website was developed by a team of developers as below
       Implementing a way to track user's progress and remember it over sessions.
 - [ ] Sound
       Add sounds to the games to improve engagement.
-- [ ] Other Features
+- [ ] New games and other Features
 
 See the [open issues](https://github.com/nrprabhav/Group-Project/issues) for a full list of proposed features (and known issues).
 
@@ -186,9 +197,8 @@ Deployed Link: [https://nrprabhav.github.io/Times-Table-Trainer/](https://nrprab
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments (Are there any?)
 
-* []()
-* []()
-* []()
+* [Fantastic-pudding](https://fantastic-pudding.vercel.app/)
+* [Bootstrap](https://getbootstrap.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

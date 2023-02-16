@@ -1,0 +1,17 @@
+/* .jumbotron {
+    background-image: url(../images/rockOn_dark.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+} */
+
+body {
+    background-color: #97D9FF;
+}
+
+.jumbotron {
+    background-color: rgb(209, 251, 220);
+}
