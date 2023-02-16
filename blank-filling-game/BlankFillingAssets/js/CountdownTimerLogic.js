@@ -4,8 +4,8 @@ const timeDisplayEl = $(".time-display");
 // or load the time after all other things loaded.
 // One question lasts for 10s, but here we show total time
 // the total question number can be changed at the start page.
-// const tQN = $(".total-question-number").text();
-const tQN = 5;
+const tQN = $(".total-question-number").text();
+// const tQN = 5;
 console.log(`!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!tQN = ${tQN}`);
 const targetTime = new Date().getTime() + 10000 * tQN + 1000;
 console.log(`targetTime = ${targetTime}`);
