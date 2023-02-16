@@ -3,7 +3,11 @@ $("#show-results-button").hide();
 // range could be changed at the start page
 let multiplicatorRange = 12;
 let currentQuestionNumber = 0;
+// total question number is suggested to be smaller than 25 due to GIPHY API, 
+// see reward badge function
 const totalQuestionNumber = 5;
+// count how many questions are correctly answered
+let correctAnswersNumber = 0;
 let answerHistory = [{
     "question-number": 0,
     "multiplicators-and-right-answer": [0, 0, 0],
@@ -137,6 +141,8 @@ const checkAnswers = function () {
         console.log(`{${userInput}} == {${rightAnswer}} ? ${userInput == rightAnswer}`);
         if (userInput == rightAnswer) {
             console.log("correct answer");
+            correctAnswersNumber += 1;
+            console.log(`correctAnswersNumber = ${correctAnswersNumber}`);
             return "CA";
         } else {
             console.log("wrong answer");
@@ -200,6 +206,7 @@ const saveAnswerWithoutTimer = function () {
 };
 
 const renderAnswersHistory = function () {
+    $("#show-results-button").hide();
     const storedAnswerHistory = JSON.parse(localStorage.getItem("answer-history"));
     const jumbotronRightEl = $(".jumbotron-right");
     const historyEl = $("<ul>");
@@ -254,11 +261,79 @@ const renderAnswersHistory = function () {
     }
 };
 
+const rewardBadge = function () {
+    const jumbotronBottomEl = $(".jumbotron-bottom");
+    const prompt = $("<p>");
+    prompt.addClass("lead");
+    prompt.html(`CONGRATULATIONS!!! <br>
+    You got ${correctAnswersNumber} + 1 badges!!!
+    Now choose your mascot on badges:`);
+    const optionsContainer = $("<div>");
+    optionsContainer.attr("class", "btn-group btn-group-toggle");
+    optionsContainer.attr("data-toggle", "buttons");
+    const rewardBadgesContainer = $("<div>");
+    rewardBadgesContainer.attr("class", "w-100 justify-content-between row");
+    jumbotronBottomEl.append(prompt, optionsContainer, rewardBadgesContainer);
+    console.log("inside reward badge function!!!!")
+    const catOption = $("<button>");
+    const dogOption = $("<button>");
+    const rabbitOption = $("<button>");
+    const hamsterOption = $("<button>");
+    catOption.attr("class", "btn btn-primary reward-button");
+    dogOption.attr("class", "btn btn-primary reward-button");
+    rabbitOption.attr("class", "btn btn-primary reward-button");
+    hamsterOption.attr("class", "btn btn-primary reward-button");
+    catOption.attr("data-animal", "cat");
+    dogOption.attr("data-animal", "dog");
+    rabbitOption.attr("data-animal", "rabbit");
+    hamsterOption.attr("data-animal", "hamster");
+    catOption.text("cat");
+    dogOption.text("dog");
+    rabbitOption.text("rabbit");
+    hamsterOption.text("hamster");
+    const splitLine = $("<hr>");
+    splitLine.addClass("my-4");
+    optionsContainer.append(catOption, dogOption, rabbitOption, hamsterOption);
+    const giphyAPIStartWith = "https://api.giphy.com/v1/stickers/search?q=";
+    const giphyAPIKey = "&api_key=rbsOnueJuIpNrLDRkd1t6Dpg80SZzdFq&rating=g&limit=";
+    // GIPHY API has a 50 limit, so the total number of questions should be smaller than 50,
+    // maybe smaller than 25 is better, due to gif query speed and loading performance.
+    // ref: https://developers.giphy.com/docs/api/endpoint#search
+    const limit = correctAnswersNumber + 1;
+    console.log(`limit = ${limit}`);
+    $(".reward-button").on("click", function () {
+        $(".reward-button").hide();
+        const animal = $(this).attr("data-animal");
+        const queryURL = giphyAPIStartWith + animal + giphyAPIKey + limit;
+        console.log(queryURL);
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            let results = response.data;
+            for (var i = 0; i < results.length; i++) {
+                let animalDiv = $("<div>");
+                animalDiv.attr("class", "col-lg-3 col-md-3 col-sm-6");
+                console.log(results[i].rating);
+                let animalImage = $("<img>");
+                animalImage.addClass("center-block");
+                console.log(results[i].images.fixed_width_small.url);
+                animalImage.attr("src", results[i].images.fixed_width_small.url);
+                animalImage.attr("alt", results[i].title);
+                animalDiv.append(animalImage);
+                rewardBadgesContainer.append(animalDiv);
+            }
+        });
+    });
+};
+
 const goNextWithoutTimer = function (multiplicatorRange, cQNumber, tQNumber) {
     currentQuestionNumber = cQNumber;
     if (currentQuestionNumber < tQNumber) {
         currentQuestionNumber = questionGenerator(multiplicatorRange, currentQuestionNumber);
         console.log(`currentQuestionNumber = ${currentQuestionNumber}`);
+        $(".blank-answer").val("");
         // start global timer and local timer
     } else {
         // next button change to show results button
@@ -267,6 +342,7 @@ const goNextWithoutTimer = function (multiplicatorRange, cQNumber, tQNumber) {
         // render results
         $("#show-results-button").on("click", renderAnswersHistory);
         // reward users with a gif from giphy API
+        rewardBadge();
     }
 
 };
