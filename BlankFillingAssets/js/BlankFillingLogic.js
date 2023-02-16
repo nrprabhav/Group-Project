@@ -5,6 +5,7 @@ let multiplicatorRange = 12;
 let currentQuestionNumber = 0;
 // total question number is suggested to be smaller than 25 due to GIPHY API, 
 // see reward badge function
+// the total question number can be changed at the start page.
 const totalQuestionNumber = 5;
 // count how many questions are correctly answered
 let correctAnswersNumber = 0;
@@ -85,6 +86,8 @@ const timeOutCheck = function () {
         audioEl.currentTime = 0;
         countDownSoundPlayFlag = true;
         console.log(`clearFlag = ${clearTimeOutCheckIntervalFlag}`);
+        // $(".container").hide();
+        // alert("Time ran out! Press F5 to take quiz again.");
         return clearTimeOutCheckIntervalFlag;
     } else if (rTime > 0 && rTime <= 4000) {
         if (Math.round(rTime / 1000) == 4) {
@@ -392,7 +395,7 @@ const timeOutCheckInterval = window.setInterval(timeOutCheck, 500);
 //     console.log("asdasdasd" + clearTimeOutCheckIntervalFlag);
 //     clearInterval(timeOutCheckInterval);
 // }
-
+const globalTargetTime = localStorage.getItem("target-time");
 setTimeout(() => {
     clearInterval(timeOutCheckInterval);
-}, 10000);
+}, globalTargetTime);
