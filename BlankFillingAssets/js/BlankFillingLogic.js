@@ -113,6 +113,29 @@ const timeOutCheck = function () {
 //------------------------------------------------------------------------------
 // all functions without timer part
 
+const renderTimesTable = function (multiplicatorRange) {
+    const jumbotronLeftEl= $(".jumbotron-left");
+    const timesTableEl = $("<table>");
+    timesTableEl.attr("class", "table table-sm table-striped");
+    const timesTableBody = $("<tbody>");
+    timesTableEl.append(timesTableBody);
+    const timesTableTitle = $("<h5>");
+    timesTableTitle.text(`times table of ${multiplicatorRange}:`);
+    jumbotronLeftEl.append(timesTableTitle, timesTableEl);
+    for (let i = 0; i <= multiplicatorRange; i+=2) {
+        const listEl = $("<tr>");
+        const leftEl = $("<td>");
+        const rightEl = $("<td>");
+        leftEl.html(`${i} <span>&#215;</span> ${multiplicatorRange} = ${i * multiplicatorRange}`);
+        rightEl.html(`${i + 1} <span>&#215;</span> ${multiplicatorRange} = ${(i + 1) * multiplicatorRange}`);
+        if (i + 1 > multiplicatorRange) {
+            rightEl.html("");
+        }
+        listEl.append(leftEl, rightEl);
+        timesTableEl.append(listEl);
+    }
+};
+
 // a function to generate the question, show question number, 
 const questionGenerator = function (multiplicatorRange, currentQuestionNumber) {
     // update question number
@@ -263,18 +286,19 @@ const renderAnswersHistory = function () {
 
 const rewardBadge = function () {
     const jumbotronBottomEl = $(".jumbotron-bottom");
-    const prompt = $("<p>");
-    prompt.addClass("lead");
+    const prompt = $("<h5>");
     prompt.html(`CONGRATULATIONS!!! <br>
-    You got ${correctAnswersNumber} + 1 badges!!!
-    Now choose your mascot on badges:`);
+    You got ${correctAnswersNumber} + 1 badges!!!`);
+    const hiddenPrompt = $("<p>");
+    hiddenPrompt.attr("class", "lead hidden-prompt");
+    hiddenPrompt.html(`Now choose your mascot on badges:`);
     const optionsContainer = $("<div>");
     optionsContainer.attr("class", "btn-group btn-group-toggle");
     optionsContainer.attr("data-toggle", "buttons");
     const rewardBadgesContainer = $("<div>");
     rewardBadgesContainer.attr("class", "w-100 justify-content-between row");
-    jumbotronBottomEl.append(prompt, optionsContainer, rewardBadgesContainer);
-    console.log("inside reward badge function!!!!")
+    jumbotronBottomEl.append(prompt, hiddenPrompt, optionsContainer, rewardBadgesContainer);
+    console.log("inside reward badge function!!!!");
     const catOption = $("<button>");
     const dogOption = $("<button>");
     const rabbitOption = $("<button>");
@@ -302,6 +326,7 @@ const rewardBadge = function () {
     const limit = correctAnswersNumber + 1;
     console.log(`limit = ${limit}`);
     $(".reward-button").on("click", function () {
+        $(".hidden-prompt").hide();
         $(".reward-button").hide();
         const animal = $(this).attr("data-animal");
         const queryURL = giphyAPIStartWith + animal + giphyAPIKey + limit;
@@ -357,6 +382,7 @@ const saveAnswerGoNextWithoutTimer = function () {
 // End of all definitions
 console.log(`now current question number = ${currentQuestionNumber}`);
 currentQuestionNumber = questionGenerator(multiplicatorRange, currentQuestionNumber);
+renderTimesTable(multiplicatorRange);
 // nextButtonEl.addEventListener("click", saveAnswerGoNext);
 nextButtonEl.addEventListener("click", saveAnswerGoNextWithoutTimer);
 // According to Nyquist sampling theorem,
