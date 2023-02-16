@@ -1,7 +1,3 @@
-function allowDrop(event) {
-  event.preventDefault();
-}
-
 // countdown//
 
 const FULL_DASH_ARRAY = 283;
@@ -22,40 +18,42 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 80;
+const TIME_LIMIT = 55;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 
-document.getElementById("countdown").innerHTML = `
-<div class="base-timer">
-  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <g class="base-timer__circle">
-      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
-      <path
-        id="base-timer-path-remaining"
-        stroke-dasharray="283"
-        class="base-timer__path-remaining ${remainingPathColor}"
-        d="
-          M 50, 50
-          m -45, 0
-          a 45,45 0 1,0 90,0
-          a 45,45 0 1,0 -90,0
-        "
-      ></path>
-    </g>
-  </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timeLeft
-  )}</span>
-</div>
+function displayAndStartTimer() {
+  document.getElementById("countdown").innerHTML = `
+        <div class="base-timer">
+          <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="base-timer__circle">
+              <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+              <path
+                id="base-timer-path-remaining"
+                stroke-dasharray="283"
+                class="base-timer__path-remaining ${remainingPathColor}"
+                d="
+                  M 50, 50
+                  m -45, 0
+                  a 45,45 0 1,0 90,0
+                  a 45,45 0 1,0 -90,0
+                "
+              ></path>
+            </g>
+          </svg>
+          <span id="base-timer-label" class="base-timer__label">${formatTime(
+            timeLeft
+          )}</span>
+        </div>
 `;
-
-startTimer();
+  startTimer();
+}
 
 function onTimesUp() {
   clearInterval(timerInterval);
+  endGame();
 }
 
 function startTimer() {
@@ -118,6 +116,11 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray);
 }
 /////////// COUNTDOWN END ///////
+///
+
+function allowDrop(event) {
+  event.preventDefault();
+}
 
 function drag(event) {
   // When a box is dragged
@@ -128,7 +131,7 @@ function drag(event) {
 
 function drop(event) {
   // When one of the answers if dropped
-  
+
   event.preventDefault();
   var data = event.dataTransfer.getData("text");
   event.target.appendChild(document.getElementById(data));
@@ -150,7 +153,7 @@ function fillQuestions() {
   let multiplier = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   let answers = new Array(10).fill(0);
   console.log(multiplier.sort(() => Math.random() - 0.5));//Do not comment out
-  
+
   // Display the questions and change the answers for the dropboxes
   for (let i = 0; i < 10; i++) {
     $(".table-of-").text(timesTableOf);
@@ -183,6 +186,7 @@ function changeDisplayMode() {
     $("#testing-mode-text").css("display", "inline");
     $("#learning-mode-text").css("display", "none");
     $("#submit").css("display", "inline");
+    displayAndStartTimer();
   }
 }
 
@@ -195,7 +199,10 @@ $(".switch").on("click", function (event) {
 
 $("#submit").click(function () {
   // When the "Check Your Answers" button is clicked
+  endGame();
+})
 
+function endGame() {
   console.log("Checking");
   let scoreCorrect = 0;
   let scoreWrong = 0;
@@ -222,12 +229,12 @@ $("#submit").click(function () {
   $("#score-wrong").text(scoreWrong);
   $("#score-no-attempt").text(scoreNoAttempt);
   $("#exampleModalCenter").modal();
-})
+}
 
 /*********************************/
 // Which times table are we practicing - options from the homepage
 let timesTableOf = 12;
-$("#selectTable").change(function(){
+$("#selectTable").change(function () {
   timesTableOf = $(this).children("option:selected").val();
   fillQuestions();
 });
@@ -247,3 +254,4 @@ if (mode === null) { //If mode doesn't exist
 }
 changeDisplayMode();
 fillQuestions();
+

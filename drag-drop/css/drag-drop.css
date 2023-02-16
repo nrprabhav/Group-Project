@@ -6,7 +6,9 @@ body {
   place-items: center;
 }
 
+#countdown, 
 .base-timer {
+  z-index: 1000;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -62,12 +64,13 @@ body {
   font-size: 48px;
 }
 /* COUNTDOWN END */
+
 h1{
   display: flex;
   justify-content:space-around;
   text-justify:center;
   background-color: rgb(209, 251, 220); 
-  max-width: 100%;
+  width: 100%;
   min-height: 100px;
 }
 
@@ -82,14 +85,17 @@ h1{
 
 #drag-drop-container{
   background-color: rgb(209, 251, 220);
+  width: 100%;
 }
 
 #time-table-selector{
   background-color: #97D9FF;
+  width: 100%;
 }
 
 #mode-select{
   background-color: #97D9FF;
+  width: 100%;
 }
 
 #questions {
