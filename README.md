@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/nrprabhav/Group-Project">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Times Table Trainer</h3>
@@ -120,40 +120,32 @@ This is a website with different tools for kids to learn their times table. A va
 ### Features of the Page
 1. The home page offers the user an option of choosing to play several games or learn the times table using Youtube videos
 2. Several games are offered:
-    a. Animation game with speed control
+    a. Save the bird Animation game with speed control
     b. Drag and Drop game with learning mode and testing mode
     c. Fill in the blanks
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Homepage
+#### Homepage
 
-[[homepage-screenshot](./images/homepage-screenshot.png)
-[![drag-and-drop-game-screenshot](./images/drag-and-drop-screenshot.png)
-[![save-bird-game-screenshot](./images/save-bird-game-screenshot.png)
-[![revision-youtube-screenshot](./images/youtube-revision-screenshot.png)
+![homepage-screenshot](./images/homepage-screenshot.png)
 
+#### Drag and Drop Game
 
-Add screen-shots of each page working.
+![drag-and-drop-game-screenshot](./images/drag-and-drop-screenshot.png)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+#### Save Bird Game
 
+![save-bird-game-screenshot](./images/save-bird-game-screenshot.png)
 
-<!--
-<!-- ROADMAP --
-## Roadmap
+#### Revision Videos Page
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+![revision-youtube-screenshot](./images/youtube-revision-screenshot.png)
 
-See the [open issues](https://github.com/nrprabhav/Group-Project/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
--->
 
 <!-- CONTRIBUTING -->
 ## Contributions
@@ -163,11 +155,30 @@ This website was developed by a team of developers as below
 - [Bilaal Kulane]()
 - [Maisie Truong]()
 - [Prabhav Reddy](https://github.com/nrprabhav)
+  Prabhav took a lead in making the 
+  - drag-drop game, 
+  - save the bird game, and 
+  - video song page
 - [Ranjana Kumar]()
 - [Weilong Wang]()
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- ROADMAP -->
+## Roadmap
+
+- [ ] Learning Path
+      A learning path for children starting from simple counting all the way up.
+- [ ] Tracking
+      Implementing a way to track user's progress and remember it over sessions.
+- [ ] Sound
+      Add sounds to the games to improve engagement.
+- [ ] Other Features
+
+See the [open issues](https://github.com/nrprabhav/Group-Project/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- LICENSE -->
@@ -182,16 +193,16 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Links to the Project
 
-Project Link: [https://github.com/nrprabhav/Group-Project](https://github.com/nrprabhav/Group-Project)
+Project Link: [https://github.com/nrprabhav/Times-Table-Trainer](https://github.com/nrprabhav/Times-Table-Trainer)
 
-Deployed Link: [https://nrprabhav.github.io/Group-Project/](https://nrprabhav.github.io/Group-Project/)
+Deployed Link: [https://nrprabhav.github.io/Times-Table-Trainer/](https://nrprabhav.github.io/Times-Table-Trainer/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Acknowledgments (Are there any?)
 
 * []()
 * []()
