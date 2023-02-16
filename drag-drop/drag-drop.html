@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/drag-drop.css" />
+    <link rel="stylesheet"
     <title>Drag and Drop Times Table</title>
 </head>
 
 <body>
     <h1>Drag and Drop the boxes</h1>
-    <div id="time-table-selector" >
+    <div id="time-table-selector"  class="border  border-danger">
         <div class="form-group w-25 mx-auto py-4 mb-0">
             <label for="selectTable">
                 <h4>Select the Table that you want to test/practice</h4>
@@ -32,7 +33,11 @@
                 <option>12</option>
             </select>
         </div>
+        <!--countdown-->
+    <div id="countdown"></div>
+
     </div>
+
     <div class="p-2 mt-0" id="drag-drop-container">
         <div id="questions">
             <p id="q1" width="200"><span class="table-of-">7</span> x <span id="m1">5</span></p>
@@ -130,6 +135,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="./js/drag-drop.js"></script>
+    <!-- <script src="./js/countdown.js"></script> -->
 </body>
 
 
