@@ -193,9 +193,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Links to the Project
 
-Project Link: [https://github.com/nrprabhav/Group-Project](https://github.com/nrprabhav/Group-Project)
+Project Link: [https://github.com/nrprabhav/Times-Table-Trainer](https://github.com/nrprabhav/Times-Table-Trainer)
 
-Deployed Link: [https://nrprabhav.github.io/Group-Project/](https://nrprabhav.github.io/Group-Project/)
+Deployed Link: [https://nrprabhav.github.io/Times-Table-Trainer/](https://nrprabhav.github.io/Times-Table-Trainer/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
