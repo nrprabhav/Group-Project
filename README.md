@@ -127,15 +127,22 @@ This is a website with different tools for kids to learn their times table. A va
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Homepage
+#### Homepage
 
-[[homepage-screenshot](./images/homepage-screenshot.png)
-[![drag-and-drop-game-screenshot](./images/drag-and-drop-screenshot.png)
-[![save-bird-game-screenshot](./images/save-bird-game-screenshot.png)
-[![revision-youtube-screenshot](./images/youtube-revision-screenshot.png)
+![homepage-screenshot](./images/homepage-screenshot.png)
 
+#### Drag and Drop Game
 
-Add screen-shots of each page working.
+![drag-and-drop-game-screenshot](./images/drag-and-drop-screenshot.png)
+
+#### Save Bird Game
+
+![save-bird-game-screenshot](./images/save-bird-game-screenshot.png)
+
+#### Revision Videos Page
+
+![revision-youtube-screenshot](./images/youtube-revision-screenshot.png)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,7 +202,7 @@ Deployed Link: [https://nrprabhav.github.io/Group-Project/](https://nrprabhav.gi
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Acknowledgments (Are there any?)
 
 * []()
 * []()
