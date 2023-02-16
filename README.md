@@ -91,32 +91,20 @@ This is a website with different tools for kids to learn their times table. A va
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-### Installation (not sure if anyone has anything for this place)
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/nrprabhav/Group-Project.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- Features of the Page -->
 ### Features of the Page
 1. The home page offers the user an option of choosing to play several games or learn the times table using Youtube videos
 2. Several games are offered:
     a. Save the bird Animation game with speed control
     b. Drag and Drop game with learning mode and testing mode
+    - A countdown timer
+
     c. Fill in the blanks
+    - Reward badges are given on completion of game - badges have four friendly mascots: cat, dog, rabbit and hamster.
+    - Three levels of difficulty
+    - A countdown timer
+
+    d. Times table quiz game
 
 <!-- USAGE EXAMPLES -->
 ## Usage
