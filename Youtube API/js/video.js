@@ -17,6 +17,7 @@ function onYouTubePlayerAPIReady() {
   });
 }
 
+// Buttons for each times table
 $("#bottom1").on("click", function(){
     player.loadVideoById({
         'videoId': videoIds[0]
