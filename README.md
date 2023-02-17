@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/nrprabhav/Group-Project">
-    <img src="images/logo.jpg" alt="Logo" width="80" height="80">
+    <img src="./assets/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Times Table Trainer</h3>
@@ -71,7 +71,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Time Table Trainer Screen Shot][product-screenshot]](./images/Times-table-game.gif)
+[![Time Table Trainer Screen Shot][product-screenshot]](./assets/Times-table-game.gif)
 
 This is a website with different tools for kids to learn their times table. A variety of games are given to engage the attention of the kids.
 
@@ -111,24 +111,24 @@ This is a website with different tools for kids to learn their times table. A va
 
 #### Homepage
 
-![homepage-screenshot](./images/homepage-screenshot.png)
+![homepage-screenshot](./assets/homepage-screenshot.png)
 
 #### Drag and Drop Game
 
-![drag-and-drop-game-screenshot](./images/drag-and-drop-screenshot.png)
+![drag-and-drop-game-screenshot](./assets/drag-and-drop-screenshot.png)
 
 #### Save Bird Game
 
-![save-bird-game-screenshot](./images/save-bird-game-screenshot.png)
+![save-bird-game-screenshot](./assets/save-bird-game-screenshot.png)
 
 #### Fill in The Blank Game
 
-![fill-in-blank-screenshot](./images/fill-in-blank-screenshot.png)
+![fill-in-blank-screenshot](./assets/fill-in-blank-screenshot.png)
 
 
 #### Revision Videos Page
 
-![revision-youtube-screenshot](./images/youtube-revision-screenshot.png)
+![revision-youtube-screenshot](./assets/youtube-revision-screenshot.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -221,7 +221,7 @@ Deployed Link: [https://nrprabhav.github.io/Times-Table-Trainer/](https://nrprab
 [license-url]: https://github.com/nrprabhav/Group-Project/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/Times-table-game.gif
+[product-screenshot]: ./assets/Times-table-game.gif
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
