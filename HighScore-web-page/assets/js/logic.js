@@ -60,12 +60,13 @@ function getQuestion(){
     choicesElement.innerHTML = "";
 
     currentQuestion.choices.forEach(function(choice, index) {
+        console.log(choice);
         let choiceButton = document.createElement("button");
 
         choiceButton.setAttribute("class", "choice");
         choiceButton.setAttribute("value", choice);
 
-        choiceButton.textContent = '$(index + 1). $(choices)'
+        choiceButton.textContent = choice;///'$(index + 1). $(choices)'
 
         choiceButton.addEventListener("click", questionClick);
 
