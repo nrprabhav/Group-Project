@@ -161,11 +161,11 @@ This website was developed by a team of developers as below
 <!-- ROADMAP -->
 ## Future Work
 
-- [ ] Learning Path
+- [ ] Learning Path:
       A learning path for children starting from simple counting all the way up
-- [ ] Tracking
+- [ ] Tracking:
       Implementing a way to track user's progress and remember it over sessions
-- [ ] Sound
+- [ ] Sound:
       Add sounds to the games to improve engagement
 - [ ] Do extensive testing to locate bugs in the code
 - [ ] New games and other Features

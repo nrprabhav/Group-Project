@@ -66,7 +66,7 @@ function getQuestion(){
         choiceButton.setAttribute("class", "choice");
         choiceButton.setAttribute("value", choice);
 
-        choiceButton.textContent = choice;///'$(index + 1). $(choices)'
+        choiceButton.textContent = `${index + 1}. ${choice}`;
 
         choiceButton.addEventListener("click", questionClick);
 

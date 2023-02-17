@@ -8,10 +8,12 @@ var id = null;
 var posMonster = -speed-4;
 
 function myMove() {
+  // Moves the monster
+
   clearInterval(id);
   id = setInterval(frame, 300);
   function frame() {
-    //console.log("Width: " + screen.width);
+    // If the monster has reached the end of the screen
     if (posMonster == 90) {
       myMonster.src=myMonster.dataset.still;
       clearInterval(id);
@@ -32,6 +34,8 @@ function myMove() {
 }
 
 function displayNewQuestion() {
+  // Display a new question
+
   let lim1 = $("#tableLimit1").children("option:selected").val();
   let lim2 = $("#tableLimit2").children("option:selected").val();
   num1 = Math.floor(Math.random() * (parseInt(lim1)+1));
@@ -42,23 +46,30 @@ function displayNewQuestion() {
 }
 
 function gameLost(){
+  // When you lose the game
+
   console.log("Display Lost Modal");
   $('#myLoseModal').modal('show');
-  //$("#monsterEating").play();
 }
 
 function gameWin(){
+  // When you win the game
+
   console.log("Display Win Modal");
   $('#myWinModal').modal('show');
 }
 
 function reload(){
+  // Reload the page
+
   location.reload();
 }
 
 var posBot = 00;
 var correctAnswer = 0;
 $("#submit").on("click", function moveBot(event) {
+  // Functionality when you submit
+
   event.preventDefault();
   if (posBot < 81 && parseInt(input.value) == correctAnswer) {
     posBot+=9; 
@@ -79,7 +90,9 @@ $("#submit").on("click", function moveBot(event) {
   } else {
     input.value="";
   }
+  
   if(start == 0) {
+    // When the page is first loaded
     start = 1;
     myMove();
   }

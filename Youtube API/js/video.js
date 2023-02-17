@@ -17,84 +17,55 @@ function onYouTubePlayerAPIReady() {
   });
 }
 
+// Buttons for each times table
 $("#bottom1").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[0],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[0]
     });
 });
 
 $("#bottom2").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[1],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[1]
     });
 });
 $("#bottom3").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[2],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[2]
     });
 });
 $("#bottom4").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[3],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[3]
     });
 });
 $("#bottom5").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[4],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[4]
     });
 });
 $("#bottom6").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[5],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[5]
     });
 });
 $("#bottom7").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[6],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[6]
     });
 });
 $("#bottom8").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[7],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[7]
     });
 });
 $("#bottom9").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[8],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[8]
     });
 });
 $("#bottom10").on("click", function(){
-    console.log("Hi");
     player.loadVideoById({
-        'videoId': videoIds[9],
-        //'startSeconds': 5,
-        //'endSeconds': 60
+        'videoId': videoIds[9]
     });
 });
