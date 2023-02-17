@@ -8,7 +8,7 @@ function printHighScores(){
 
     highScores.forEach(function(score){ 
         let li = document.createElement("li");
-        li.textContent = '${score.initials} - ${score.score}'
+        li.textContent = score.initials + " - " + score.score;//'${score.initials} - ${score.score}'
 
         let ol = document.getElementById("highscores");
         ol.appendChild(li);
