@@ -92,7 +92,7 @@ This is a website with different tools for kids to learn their times table. A va
 
 <!-- Features of the Page -->
 ### Features of the Page
-1. The home page offers the user an option of choosing to play several games or learn the times table using Youtube videos
+1. The home page offers the user an option of choosing to play several games or learn the times table using Youtube (API) videos
 2. Several games are offered:
     a. Save the bird Animation game with speed control
     b. Drag and Drop game with learning mode and testing mode
@@ -149,7 +149,7 @@ This website was developed by a team of developers as below
   - save the bird game, and 
   - video song page
 - [Ranjana Kumar](https://github.com/kumarranjana)
-  Helped to review code and designed the Times table quiz game
+  Ranjana designed the multiple choice quiz game
 - [Weilong Wang](https://github.com/V7lanw)
   Weilong took a lead in making the:
   - blank filling game, and
@@ -169,7 +169,6 @@ This website was developed by a team of developers as below
       Add sounds to the games to improve engagement
 - [ ] Do extensive testing to locate bugs in the code
 - [ ] New games and other Features
-- [ ] Finish the times table quiz game. Unfinished version [here](https://nrprabhav.github.io/Times-Table-Trainer/HighScore-web-page/index.html)
 
 See the [open issues](https://github.com/nrprabhav/Group-Project/issues) for a full list of proposed features (and known issues).
 
